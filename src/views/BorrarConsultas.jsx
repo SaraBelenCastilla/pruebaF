@@ -6,7 +6,7 @@ function BorrarConsultas() {
   let{ id } = useParams()
     let navigate =useNavigate()
    function regresar() {
-    navigate('Consultas')
+    navigate('/')
    }
    function eliminar() {
     const controller = new AbortController();
@@ -24,7 +24,7 @@ function BorrarConsultas() {
     .then(res=>res.json())
     .then(data=>{
       if (data.status == 'success') {
-        window.location.href = 'Consultas';
+        window.location.href = '/';
       }
     })
     .catch((err) => console.log(err))
